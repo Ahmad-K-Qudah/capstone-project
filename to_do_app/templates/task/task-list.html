@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block head %}
+<title>Tasks</title>
+<link rel="stylesheet" href="{%static 'tasklist.css'%}">
+{% endblock head %}
+
+    {% block content %}
+     <div class='taskList'> 
+        
+    <h1>Current Tasks</h1>
+        
+      
+    {% for task in all_tasks %}
+     
+        <li><a href="/task/{{task.id}}/"> {{task.task_name}}</a></li>
+       
+    {% endfor %}
+     </div>   
+        
+
+    {% endblock content %}

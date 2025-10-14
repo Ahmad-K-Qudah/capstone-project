@@ -1,0 +1,55 @@
+#loginForm input {
+    width: 15%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#loginForm label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#loginbutton {
+    background-color: #28c205;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    #loginForm {
+        width: 80%;
+        padding: 12px;
+    }
+
+    #loginForm label {
+
+        font-size: 16px;
+    }
+
+    #loginForm input {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    #loginbutton {
+        font-size: 15px;
+        padding: 12px;
+    }
+}

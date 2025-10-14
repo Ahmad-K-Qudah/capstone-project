@@ -1,0 +1,66 @@
+.taskList h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px 5px 20px 5px;
+    padding: 0px;
+}
+
+.taskList {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    width: 400px;
+    margin: 50px 50px 50px 0px;
+    background: rgba(244, 244, 244, 0.685);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    padding: 20px;
+}
+
+.taskList li {
+    list-style: none;
+    margin-top: 10px;
+    border-bottom: 1px solid #0b0101;
+    padding-bottom: 8px;
+}
+
+.taskList li:last-child {
+    border-bottom: none;
+}
+
+.taskList a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.taskList a:hover {
+    color: #04AA6D;
+    transform: translateX(15px);
+}
+
+.taskList h2 {
+    text-align: center;
+    color: #04AA6D;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .taskList {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .taskList h2 {
+        font-size: 20px;
+    }
+
+    .taskList a {
+        font-size: 16px;
+    }
+}

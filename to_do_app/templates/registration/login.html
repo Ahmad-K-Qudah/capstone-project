@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<title>Login</title>
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+
+    <h1>Login into your account</h1>
+    <form method='post'>
+        {% csrf_token %}
+        {% comment %} {{form.as_p}} {% endcomment %}
+        {% for field in form %}
+
+        <div id='loginForm'>   
+            {{field.label_tag}}
+                {{field}}
+      
+              
+            {% for error in  field.errors %}
+                <p>{{error}}</p>
+            {% endfor %}
+        {% endfor %}
+   </div>    
+        <button id='loginbutton'>Login</button>
+    </form>
+
+{% endblock content %}

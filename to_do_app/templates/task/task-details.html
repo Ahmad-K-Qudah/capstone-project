@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block head %}
+<title>Task Details</title>
+<link rel="stylesheet" href="{% static 'task-details.css' %}">
+{% endblock head %}
+
+{% block content %}
+      <div class='Task-Details'>
+      <h1>{{task.task_name}} Details</h1>
+        <p>Type: {{task.task_type}}</p>
+        <p>Description: {{task.task_description}}</p>
+        <p>Due Date: {{task.task_due_date}}</p>
+        <p>Completed: {{task.task_is_completed}}</p>
+        
+          <form action="/task/{{task.id}}/update/" method='get' >
+            {% csrf_token %}
+            <button>Update Task</button>
+        </form>
+        
+        <form  action="/task/{{task.id}}/delete/"  method='post' >
+            {% csrf_token %}
+            <button>Delete task</button>
+        </form>
+        </div>
+{% endblock content %}

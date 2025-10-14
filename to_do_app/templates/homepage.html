@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<title>Homepage</title>
+<link rel="stylesheet" href="{% static 'homepage.css' %}">
+
+
+{% endblock head %}
+
+{% block content %}
+
+<div id='home'>
+    {% if user.is_authenticated %}
+    <p>{{user.username}} Go ahead and check what are today's tasks</p>
+    {% else %}
+    <p>Please Sign-in or Create an account to ba able to access the website you can do that by using the navbar or click <a href="/auth/signup/">here</a> to create an account or <a href="/auth/login/">here </a>to login</p>
+    {% endif %}
+
+</div>
+{% endblock content %}

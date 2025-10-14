@@ -1,0 +1,59 @@
+#SignUpForm input {
+    width: 15%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#SignUpForm label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#SignUpForm p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: red !important;
+}
+
+#SignUpbutton {
+    background-color: #067cd7;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    #SignUpForm {
+        width: 80%;
+        padding: 12px;
+    }
+
+    #SignUpForm label {
+        font-size: 16px;
+    }
+
+    #SignUpForm input {
+        font-size: 14px;
+    }
+
+    #SignUpbutton {
+        font-size: 15px;
+        padding: 12px;
+    }
+}

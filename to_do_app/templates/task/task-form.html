@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block head %}
+<title>create task</title>
+<link rel="stylesheet" href="{% static 'task-form.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+  
+<h1 class="taskaction">{{action}} Task</h1>
+
+    
+    <form  method="post">
+        {% csrf_token %}
+        
+       
+        {% for field in form %}
+        <div class='taskFrom'>
+            {{field.label_tag}}
+            {{field}}
+
+            {% for error in field.errors %}
+                <p>{{error}}</p>
+            {% endfor %}
+        
+        {% endfor %}
+         </div>
+
+        <button id="formbutton"type='submit'>{{action}}</button>
+        </form>
+       
+{% endblock content %}

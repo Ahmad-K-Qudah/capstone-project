@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% block head %}
+    
+    {% endblock head %}
+</head>
+<body>
+            {% if user.is_authenticated %}
+            <h1 class="greeting">Welcome back {{user.username}}</h1>
+            {% else %}
+            {% comment %} <h1 class="greeting">Login or Create an account</h1> {% endcomment %}
+            {% endif %}
+    <div class="navbar">
+             {% if user.is_authenticated %}
+                
+                <a href="{%url 'all_tasks'%}"> Task List </a>
+                <a href="{%url 'task_create'%}"> Create Task  </a>
+            
+                <form method='post' action="{% url 'logout'%}" >
+                    {% csrf_token %}
+                    <button>Logout</button>
+                </form>
+        {% else %}
+            <a href="{% url 'homepage'%}">Homepage</a>
+            <a href="{% url 'login'%}">Login</a>
+            <a href="{% url 'signup'%}">Signup</a>
+        {% endif %}
+    </div>
+    {% block content %}
+    
+    {% endblock content %}
+</body>
+</html>

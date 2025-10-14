@@ -1,0 +1,80 @@
+.Task-Details {
+    max-width: 50%;
+    width: 25%;
+    margin: 60px auto;
+    background-color: rgba(244, 244, 244, 0.685);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #020000;
+    float: left;
+    position: relative;
+
+}
+
+
+
+.Task-Details p {
+    font-size: 18px;
+    line-height: 1.6;
+    border-bottom: 1px solid #0c0c0c;
+    padding: 10px 0;
+    margin: 0;
+}
+
+
+.Task-Details button {
+    width: 48%;
+    background-color: #067cd7;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Task-Details form:first-of-type button:hover {
+    background-color: #045ea6;
+}
+
+.Task-Details form:last-of-type button {
+    background-color: #d9534f;
+}
+
+.Task-Details form:last-of-type button:hover {
+    background-color: #b52b27;
+}
+
+@media (max-width: 768px) {
+    .Task-Details {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .Task-Details h1 {
+        font-size: 24px;
+    }
+
+    .Task-Details p {
+        font-size: 16px;
+    }
+
+    .Task-Details button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .Task-Details form {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .Task-Details form+form {
+        margin-left: 0;
+    }
+}
