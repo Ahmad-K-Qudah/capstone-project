@@ -11,7 +11,7 @@ The main goal of this project was to practice **full-stack development** using D
 ##  Getting Started
 
 ###  Live App
-👉 [Visit the deployed app here](https://link.com)
+👉 [Visit the deployed app here](https://to-do-app-dcua.onrender.com)
 
 ### 🧱 Planning Materials
 - **ERD:** ![View the Entity Relationship Diagram](to_do_app/static/images/ERD.png)
