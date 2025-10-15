@@ -10,12 +10,26 @@
 
 {% block content %}
 
-<div id='home'>
-    {% if user.is_authenticated %}
-    <p>{{user.username}} Go ahead and check what are today's tasks</p>
-    {% else %}
-    <p>Please Sign-in or Create an account to ba able to access the website you can do that by using the navbar or click <a href="/auth/signup/">here</a> to create an account or <a href="/auth/login/">here </a>to login</p>
-    {% endif %}
+<div class="app-info">
+  {% if user.is_authenticated %}
+  <div class="app-info">
 
+    <h2 class="home">{{ user.username }}, go ahead and check what are today's tasks.</h2>
+  </div>
+    
+  {% else %}
+   <p class="home">Please Sign-in or Create an account to be able to access the website. You can do that by using the navbar or click 
+      <a class="home" href="/auth/signup/">here</a> to create an account or 
+      <a class="home" href="/auth/login/">here</a> to login.
+    </p>
+  <div class="app-info">
+    <h2>Stay Organized. Stay Focused.</h2>
+    <p>Manage your daily tasks efficiently and keep track of your progress with the Task Manager App.</p>
+  </div>
+    
+  {% endif %}
+
+
+  
 </div>
 {% endblock content %}
